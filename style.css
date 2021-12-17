@@ -1,0 +1,216 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: hsl(209, 23%, 22%);
+    --secondary-color:hsl(207, 26%, 17%);
+    --secondary-box-color:hsl(207, 26%, 15%);
+    --input-color:hsl(0, 0%, 100%);
+    --white: hsl(0, 0%, 100%);
+    --small-font:13px;
+}
+.load-cover{
+    z-index: 20;
+    position: fixed;
+    width:100%;
+    height: 100vh;
+    background: var(--white);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+h3{
+    font-size:30px;
+}
+.flex{
+    display:flex;
+}
+span{
+    font-weight: 600;
+    color:var(--white);
+}
+p,h3,h4{
+    color:var(--white)
+}
+.other-details p{
+    color:var(--input-color);
+}
+ul{
+    list-style: none;
+    flex-direction: column;
+    color:var(--input-color);
+    background: var(--primary-color);
+    margin-top: 5px;
+    padding:10px 10px;
+    height:100px;
+    top:-100%;
+    width:100%;
+    overflow: auto;
+    text-overflow: scroll;
+    position: absolute;
+    z-index:5;
+    display: none;
+}
+.ul-active{
+    top:100%;
+    display:flex;
+}
+body{
+    background-color: var(--secondary-color);
+    width:100%;
+    margin:auto;
+    font-size: 16px;
+    transition: .3s ease-in-out;
+}
+.dropdown-nav li{
+    padding-bottom: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+.dropdown-nav li:hover{
+    border-right: 3px solid var(--white);
+    padding-left:5px;
+}
+header{
+    background:var(--primary-color);
+    width:100%;
+    box-shadow: 0px 5px 3px var(--secondary-box-color);
+}
+.header, .aside{
+    width:80%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding:30px 0px;
+}
+aside{
+    padding:35px 0;
+}
+.dropdown{
+    width:18%;
+    flex-direction: column;
+    position: relative;
+    box-shadow:2px 2px 3px var(--secondary-box-color), -2px -2px 3px var(--secondary-box-color) ;
+    cursor: pointer;
+}
+.search, .dropdown-text-icon{
+    height:40px;
+    width:35%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    box-shadow:2px 2px 3px var(--secondary-box-color), -2px -2px 3px var(--secondary-box-color) ;
+}
+.search input{
+    width:98%;
+    height: 100%;
+    color:var(--input-color);
+    border:none;
+    background: var(--primary-color);
+}
+.search img{
+    height:25px;
+    padding:0 10px;
+    cursor: pointer;
+}
+.dropdown-text-icon img{
+    height:20px;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    color:var(--white);
+    font-size: var(--small-font);
+}
+.dropdown-text-icon{
+    position: relative;
+    width: 100%;
+    padding:0 10px;
+    justify-content: space-between;
+}
+main{
+    width:80%;
+    margin: auto;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+    align-items: center;
+    justify-content: space-between;
+    grid-gap:50px 50px; 
+}
+.countries-container{
+    background: var(--primary-color);
+    border-radius: 3px;
+    position: relative;
+    box-shadow:3px 3px 3px var(--secondary-box-color), -3px -3px 3px var(--secondary-box-color) ;
+}
+.countries .country-detail{
+    padding:15px 15px 25px 15px;
+}
+.countries img{
+    width:100%;
+    height:160px;
+    border-radius:3px 3px 0px 0px;
+    position: relative;
+    object-fit: cover;
+}
+
+.name-of-country{
+    padding-bottom: 8px;
+}
+.country-detail p{
+    padding-bottom: 3px;
+}
+.theme{
+    cursor:pointer;
+}
+.theme img{
+    height:20px;
+    padding-right:10px;
+}
+.dropdown-text-icon p, .other-details p{
+    font-size: var(--small-font);
+}
+main{
+    margin-bottom: 50px;
+}
+a{
+    text-decoration: none;
+    color:var(--white);
+}
+footer:hover a{
+    font-weight: 500;
+    text-decoration: underline;
+}
+footer{
+    text-align: center;
+    color:var(--white);
+    font-size: var(--small-font);
+    padding: 5px 5px 35px 5px;
+}
+
+@media(max-width:500px){
+    .container{
+        grid-template-columns: repeat(auto-fill, minmax(100%, 100%));
+    }
+    .aside{
+        display: block;
+        padding:unset;
+        padding-bottom: 25px;
+    }
+    .search{
+        width:100%;
+    }
+    .dropdown{
+        width:60%;
+        margin-top:25px;
+    }
+    h3{
+        font-size: 20px;
+    }
+}

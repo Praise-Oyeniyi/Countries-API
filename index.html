@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries and Country Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="load-cover">
+        <img src="https://media.giphy.com/media/52qtwCtj9OLTi/giphy.gif" alt="Please wait...">
+    </div>
+   <section class="body">
+    <header>
+        <section class="header flex">
+            <h3 class="where">
+                Where in the world?
+            </h3>
+            <div class="theme flex" onclick="changeTheme()">
+                <img src="images/icon-sun.svg" alt="changetheme" id="change">
+                <p class="themetext">Light mode</p>
+            </div>
+        </section>
+    </header>
+
+    <aside>
+        <section class="aside flex">
+            <div class="search flex">
+                <img src="images/icons8-search-50.png" alt="search-for-countries">
+                <input type="search" name="countrySearch" id="countrySearch" placeholder="Search for a country..." style='text-transform: capitalize;'>
+            </div>
+            <div class="dropdown flex">
+                <div class="dropdown-text-icon flex">
+                    <p>Filter by region</p>
+                    <img src="images/icons8-expand-arrow-64.png" class='text-icon' alt="dropdown-icon">
+                </div>
+                <ul class='dropdown-nav'>
+                    <li class="nav-item">Africa</li>
+                    <li class="nav-item">Americas</li>
+                    <li class="nav-item">Antarctic</li>
+                    <li class="nav-item">Asia</li>
+                    <li class="nav-item">Europe</li>
+                    <li class="nav-item">Oceania</li>                    
+                </ul>
+            </div>
+        </section>
+    </aside>
+
+    <main>
+        <div class="container">
+            <!-- <div class="countries-container">
+                <div class="countries">
+                    <img src="images/download.png" alt="country-image">
+                    <div class="country-detail">
+                        <h4 class="name-of-country">Country Name</h4>
+                        <div class="other-details">
+                            <p><span>Poulation: </span> </p>
+                            <p><span>Region: </span> </p>
+                            <p><span>Capital: </span> </p>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+    
+        </div>
+    </main>
+   </section>
+   <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor.</a> 
+    Coded by <a href="https://www.linkedin.com/in/praise-oyeniyi" target="_blank">Praise_Oyeniyi&copy;.</a>
+   </footer>
+</body>
+<script src="script.js"></script>
+</html>
